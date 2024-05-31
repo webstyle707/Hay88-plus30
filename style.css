@@ -1,0 +1,285 @@
+.bgfooter {
+  background-image: url(./images/imageforday1/imgfooter.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bgcardgirl {
+  background-image: url(./images/imageforday1/bgcardgirl.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.splide__pagination__page.is-active {
+  background: #0b85c7 !important;
+  transform: scale(1.4);
+}
+
+.splide__slide {
+  text-align: center;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#splide3 {
+  width: 300px;
+}
+
+header.sticky {
+  width: 100%;
+  transition: all 4s ease;
+  z-index: 5;
+  animation: scrollDown 1s;
+  position: fixed;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+    position: fixed;
+  }
+}
+
+@media (min-width: 1536px) {
+  .responsive {
+    width: 66%;
+  }
+}
+
+
+
+.scaleAnimation {
+  animation: scaleAnimation 1s infinite alternate;
+  /* Apply animation */
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0.97);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+.txtcenter {
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Brand logo slider */
+.brands {
+  position: relative;
+  overflow: hidden;
+  height: 8.5rem;
+}
+
+.brands:hover .brands__wrapper,
+.brands:hover .brands__preWrapper {
+  animation-play-state: paused;
+}
+
+.brands__preWrapper {
+  position: relative;
+  width: 100%;
+  height: 8.5rem;
+  transform: translateX(0%);
+  animation: scroll1 10s linear infinite;
+  animation-delay: 2s;
+  animation-direction: alternate;
+
+  will-change: transform;
+}
+
+.brands__wrapper {
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(0%) translateZ(0);
+  animation: scroll2 10s linear infinite;
+  animation-delay: 2s;
+  animation-direction: alternate;
+
+  will-change: transform;
+}
+
+.brands__wrapper>a,
+.brands__wrapper>img {
+  position: relative;
+  display: inline-block;
+  margin: 0 1rem;
+  vertical-align: middle;
+}
+
+.brands__wrapper>a img {
+  max-width: 15rem;
+  max-height: 8.5rem;
+}
+
+@keyframes scroll1 {
+  0% {
+      transform: translateX(-0%);
+  }
+
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+      transform: translateX(0%) translateZ(0);
+  }
+
+  100% {
+      transform: translateX(-100%) translateZ(0);
+  }
+}
+
+
+
+
+
+
+/* style marquee */
+#marquee {
+  padding: 10px 0;
+  width: 100%;
+}
+
+#marquee .container {
+  overflow: hidden;
+  width: 100%;
+}
+
+#marquee .pic-container {
+  display: flex;
+  animation: marquee 10s infinite linear;
+}
+
+/* #marquee:hover {
+animation-play-state: paused;
+} */
+
+#marquee .pic-container .pic {
+  flex-basis: 12%;
+  flex-shrink: 0;
+}
+
+#marquee img {
+  object-fit: cover;
+  border: 1px solid rgba(238, 231, 231, 0.9);
+}
+
+@media (max-width: 1024px) {
+  #marquee .pic-container .pic {
+      flex-basis: 18%;
+  }
+}
+
+@media (max-width: 768px) {
+  #marquee .pic-container .pic {
+      flex-basis: 22%;
+  }
+  #marquee {
+    padding: 1px 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  @keyframes marquee {
+      0% {
+          transform: translateX(0);
+      }
+
+      100% {
+          transform: translateX(-125%);
+      }
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes marquee {
+      0% {
+          transform: translateX(0);
+      }
+
+      100% {
+          transform: translateX(-186.65%);
+      }
+  }
+}
+
+
+
+
+
+
+.autoplay-progress {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 3px;
+  background-color: #fee440;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transform: scaleX(-1);
+  font-weight: bold;
+}
+
+.autoplay-progress .progressBar {
+  background-color: #777777;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+.card {
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.card-shadow {
+  box-shadow: 0 4px 14px rgba(250, 204, 21, 0.5); /* Tailwind yellow-400 with transparency */
+}
